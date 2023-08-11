@@ -59,9 +59,9 @@
 
   .audio-button {
     position: absolute;
-    top: 90%; /* Ajuste a posição vertical do botão */
+    top: 60%; /* Ajuste a posição vertical do botão */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background-color: #8b0000; /* Cor do botão: Maroon */
     color: #fff;
     border: none;
@@ -69,14 +69,14 @@
     padding: 10px 20px;
     cursor: pointer;
   }
-  
+
   .welcome-text {
     position: absolute;
     top: 40%; /* Ajuste a posição vertical do texto */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 48px; /* Tamanho do texto maior */
+    font-weight: bold; /* Texto em negrito */
     color: #8b0000; /* Cor do texto: Maroon */
   }
 </style>
@@ -85,6 +85,7 @@
 <body>
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
+    <div class="welcome-text">BEM VINDA</div>
     <div class="opening-crawl">
       Querida Bruxa,
       <br>
@@ -103,7 +104,6 @@
       - Seu Nome
     </div>
     <button class="audio-button" id="audioButton">Ativar Mágica</button>
-    <div class="welcome-text">BEM VINDA</div>
   </div>
   <script>
     const audio = new Audio('aud/harryy.mp3');
@@ -126,5 +126,6 @@
   </script>
 </body>
 </html>
+
 
 
