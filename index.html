@@ -59,9 +59,9 @@
 
   .audio-button {
     position: absolute;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: #8b0000; /* Cor do botão: Maroon */
     color: #fff;
     border: none;
@@ -84,6 +84,7 @@
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
     <div class="welcome-text">Bem-Vinda</div>
+    <button class="audio-button" id="audioButton">Ativar Mágica</button>
     <div class="opening-crawl">
       Querido(a) Bruxo(a),
       <br>
@@ -101,7 +102,6 @@
       <br>
       - Seu Nome
     </div>
-    <button class="audio-button" id="audioButton">Ativar Mágica</button>
   </div>
   <script>
     const audio = new Audio('aud/harryy.mp3');
