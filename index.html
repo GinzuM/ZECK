@@ -57,6 +57,10 @@
 <title>Feliz Aniversário!</title>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="aud/foda.mpeg" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
     <div class="opening-crawl">
@@ -77,21 +81,7 @@
       - Seu Nome
     </div>
   </div>
-  
-  <button id="playAudioButton">Ativar Áudio</button>
-  <audio id="audioElement" loop>
-    <source src="aud/harryy.mp3" type="audio/mp3">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
-  
   <script>
-    const playAudioButton = document.getElementById('playAudioButton');
-    const audioElement = document.getElementById('audioElement');
-
-    playAudioButton.addEventListener('click', () => {
-      audioElement.play();
-    });
-
     const openingCrawl = document.querySelector('.opening-crawl');
     const hogwartsSeal = document.getElementById('hogwarts-seal');
 
