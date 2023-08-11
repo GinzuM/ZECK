@@ -95,6 +95,8 @@
     const audioButton = document.getElementById('audioButton');
     let isAudioPlaying = false;
 
+    audio.loop = true;
+
     audioButton.addEventListener('click', () => {
       if (isAudioPlaying) {
         audio.pause();
@@ -107,4 +109,5 @@
   </script>
 </body>
 </html>
+
 
