@@ -59,9 +59,9 @@
 
   .audio-button {
     position: absolute;
-    top: 50%;
+    bottom: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background-color: #8b0000; /* Cor do botão: Maroon */
     color: #fff;
     border: none;
@@ -69,12 +69,21 @@
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  .welcome-text {
+    position: absolute;
+    top: calc(50% - 70px); /* Ajuste para posicionar a frase no meio */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px; /* Tamanho da fonte maior */
+  }
 </style>
 <title>Feliz Aniversário!</title>
 </head>
 <body>
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
+    <div class="welcome-text">Bem-Vinda</div>
     <button class="audio-button" id="audioButton">Ativar Mágica</button>
     <div class="opening-crawl">
       Querido(a) Bruxo(a),
