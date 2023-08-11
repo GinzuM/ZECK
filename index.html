@@ -8,7 +8,7 @@
 
   body {
     font-family: 'Dancing Script', cursive;
-    background-image: url('https://i.pinimg.com/originals/fb/95/3c/fb953cf559dd2fd6296b01a9ad4e2209.jpgM'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem de fundo */
+    background-image: url('URL_DA_IMAGEM'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem de fundo */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #fff;
@@ -59,9 +59,9 @@
 
   .audio-button {
     position: absolute;
-    top: 50%;
+    top: 60%; /* Ajuste a posição vertical do botão */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background-color: #8b0000; /* Cor do botão: Maroon */
     color: #fff;
     border: none;
@@ -72,9 +72,9 @@
 
   .welcome-text {
     position: absolute;
-    top: 40%;
+    top: 50%; /* Ajuste a posição vertical do texto */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     font-size: 24px;
     color: #8b0000; /* Cor do texto: Maroon */
   }
@@ -85,7 +85,6 @@
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
     <div class="welcome-text">BEM VINDA</div>
-    <button class="audio-button" id="audioButton">Ativar Mágica</button>
     <div class="opening-crawl">
       Querida Bruxa,
       <br>
@@ -103,6 +102,7 @@
       <br>
       - Seu Nome
     </div>
+    <button class="audio-button" id="audioButton">Ativar Mágica</button>
   </div>
   <script>
     const audio = new Audio('aud/harryy.mp3');
@@ -125,4 +125,3 @@
   </script>
 </body>
 </html>
-
