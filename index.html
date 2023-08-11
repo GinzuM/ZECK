@@ -53,14 +53,19 @@
       transform: translate(-50%, -100%);
     }
   }
+
+  .audio-button {
+    background-color: #8b0000; /* Cor do botão: Maroon */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 </style>
 <title>Feliz Aniversário!</title>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="aud/puto.mp3" type="audio/mp3">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
     <div class="opening-crawl">
@@ -80,16 +85,23 @@
       <br>
       - Seu Nome
     </div>
+    <button class="audio-button" id="audioButton">Ativar Música</button>
   </div>
   <script>
-    const openingCrawl = document.querySelector('.opening-crawl');
-    const hogwartsSeal = document.getElementById('hogwarts-seal');
+    const audio = new Audio('aud/puto.mp3');
+    const audioButton = document.getElementById('audioButton');
+    let isAudioPlaying = false;
 
-    window.addEventListener('scroll', () => {
-      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      const sealOffset = (scrollPercentage - 50) * 2; // Ajuste o valor para controlar a velocidade da paralaxe
-      hogwartsSeal.style.transform = `translateY(${sealOffset}px)`;
+    audioButton.addEventListener('click', () => {
+      if (isAudioPlaying) {
+        audio.pause();
+        isAudioPlaying = false;
+      } else {
+        audio.play();
+        isAudioPlaying = true;
+      }
     });
   </script>
 </body>
 </html>
+
