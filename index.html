@@ -8,7 +8,7 @@
 
   body {
     font-family: 'Dancing Script', cursive;
-    background-image: url('https://i.pinimg.com/originals/90/fc/ef/90fcef69bfb65bba5da11238768ea1ba.jpg'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem de fundo */
+    background-image: url('URL_DA_IMAGEM'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem de fundo */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #fff;
@@ -59,8 +59,9 @@
 
   .audio-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #8b0000; /* Cor do botão: Maroon */
     color: #fff;
     border: none;
@@ -74,7 +75,7 @@
 <body>
   <div class="opening-crawl-container">
     <img src="img/lufa.png" alt="Selo de Hogwarts" class="hogwarts-seal" id="hogwarts-seal">
-    <button class="audio-button" id="audioButton">Ativar Música</button>
+    <button class="audio-button" id="audioButton">Ativar Mágica</button>
     <div class="opening-crawl">
       Querido(a) Bruxo(a),
       <br>
@@ -108,10 +109,11 @@
         audio.play();
         isAudioPlaying = true;
       }
+      const openingCrawl = document.querySelector('.opening-crawl');
+      openingCrawl.style.animationPlayState = isAudioPlaying ? 'running' : 'paused';
     });
   </script>
 </body>
 </html>
-
 
 
